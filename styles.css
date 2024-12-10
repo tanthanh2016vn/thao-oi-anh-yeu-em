@@ -1,0 +1,248 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header.header {
+  position: relative;
+  width: 100%;
+  height: 650px; /* Chiều cao của header */
+  overflow: hidden;
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url('images/home.jpg') no-repeat center center/cover;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.highlight-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px; /* Giảm kích thước chữ nếu cần */
+  font-family: 'Arial', sans-serif;
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 
+               0 0 30px rgba(255, 255, 255, 0.6), 
+               0 0 40px rgba(255, 255, 255, 0.4);
+  z-index: 1;
+  pointer-events: none;
+}
+
+main .content {
+  padding: 20px;
+  text-align: center;
+}
+
+main .content h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+main .content p {
+  font-size: 18px;
+  color: #555;
+}
+
+
+/* ====== START HIỂN THỊ CARD  ===== */
+
+body {
+  background-color: #f4f4f9;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  gap: 10px;
+  width: 90%;
+  margin: 32px auto;
+
+  @media (max-width: 650px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  max-height: 300px;
+  display: block;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 12px;
+  position: absolute;
+  bottom: 0;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #666;
+}
+/* ====== END HIỂN THỊ CARD  ===== */
+
+/* ====== START HIỂN THỊ TEXT CHẠY AUTO  ===== */
+/* ====== END HIỂN THỊ TEXT CHẠY AUTO  ===== */
+
+.letter {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 90%;
+  margin: 32px auto;
+}
+
+.letter .content-letter {
+  padding: 32px;
+  text-align: center;
+}
+
+.letter .content-letter p {
+  font-size: 18px;
+  color: #0d1019;
+  text-align: center;
+  line-height: 32px;
+}
+
+/* ====== START HIỂN THỊ STORY-2  ===== */
+.story-2 {
+  background: url('images/story_2.jpg') no-repeat center center/cover;
+  padding: 20px; /* Thêm padding để khoảng cách bên trong */
+  color: white; /* Thay đổi màu chữ để dễ đọc trên nền ảnh */
+  font-family: Arial, sans-serif; /* Chọn font chữ */
+  margin: 32px auto;
+}
+
+.story-2 .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.story-2 .content .dark_item {
+  background: rgba(13, 16, 25, 0.6);
+}
+.story-2 .content .dark_item .title {
+  font-family: "MyriadPro-BoldCondIt";
+  display: block;
+  color: #fff;
+  font-size: 240%;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.story-2 .content .dark_item .list {
+  font-family: "MyriadPro-CondIt";
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  line-height: 30px;
+}
+/* ====== END HIỂN THỊ STORY-2  ===== */
+
+/* ====== START HIỂN THỊ STORY  ===== */
+.story {
+  background: url('images/story.jpg') no-repeat center center/cover;
+  padding: 20px; /* Thêm padding để khoảng cách bên trong */
+  color: white; /* Thay đổi màu chữ để dễ đọc trên nền ảnh */
+  font-family: Arial, sans-serif; /* Chọn font chữ */
+  margin: 32px auto;
+}
+
+.story .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.story .content .dark_item {
+  background: rgba(13, 16, 25, 0.6);
+}
+.story .content .dark_item .title {
+  font-family: "MyriadPro-BoldCondIt";
+  display: block;
+  color: #fff;
+  font-size: 240%;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.story .content .dark_item .list {
+  font-family: "MyriadPro-CondIt";
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  line-height: 30px;
+}
+/* ====== END HIỂN THỊ STORY  ===== */
+
+
+
+/* ====== START HIỂN THỊ FOOTER  ===== */
+.footer {
+  background: #0d1019 url('images/footer_bg01.png') no-repeat center center/cover;
+  padding: 20px; /* Thêm padding để khoảng cách bên trong */
+  color: white; /* Thay đổi màu chữ để dễ đọc trên nền ảnh */
+  font-family: Arial, sans-serif; /* Chọn font chữ */
+}
+.footer .content .dark_item .title {
+  font-family: "MyriadPro-BoldCondIt";
+  display: block;
+  color: #fff;
+  font-size: 240%;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer .content .dark_item .list {
+  font-family: "MyriadPro-CondIt";
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  line-height: 30px;
+}
+/* ====== END HIỂN THỊ FOOTER  ===== */

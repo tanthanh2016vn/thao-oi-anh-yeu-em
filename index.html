@@ -2,357 +2,122 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=-100%, user-scalable=yes" />  
-  <title>Story Anh và Em</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/flickity.min.css">
-  <link rel="stylesheet" href="css/OverlayScrollbars.min.css">
-  <script type="text/javascript" src="js/public_event.min.js"></script>
-  <script type="text/javascript" src="js/firefly_library.min.js"></script>  
-  <script type="text/javascript" src="js/prlax_library.js" defer></script>  
-  <script type="text/javascript" src="js/flickity.pkgd.min.js"></script>
-  <script type="text/javascript" src="js/OverlayScrollbars.min.js"></script>
-  <script type="text/javascript" src="js/anime.min.js" defer></script>
-  <script type="text/javascript" src="js/common.min.js" defer></script> 
-
-  <style>
-    .title_head_logo {
-            font-size: 36px;
-            font-weight: bold;
-            color: beige; 
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, .8); 
-        }
-     .title_bg {
-            font-size: 36px;
-            font-weight: bold;
-            color: beige; 
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, .8); 
-            text-align: center;
-        }
-    .title_2 {
-        font-family: MyriadPro-CondIt;
-        display: inline-block;
-        font-size: 20px;
-        color: #fff;
-        text-align: center;
-        letter-spacing: .5px;
-    }
-    .post_item {
-        height: auto !important;
-        padding: 0 14px !important;
-    }
-    .b05_content {
-        height: auto !important;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header với Tuyết Rơi</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <!-- START Audio -->
-  <!-- <audio controls autoplay>
-    <source src="audios/LoiTuSu-UngDaiVe-8726889.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-
-  <div id="playDiv">Nhấn để phát nhạc</div> -->
-
-  <!-- END Audio -->
-
-  <div id="wrapper">
-    <div id="header">
-      <div class="inner_hd">
-        <div class="left_hd">
-            <h1 class="logo" style="color: white;">
-                ❤️
-                <img src="images/love_em.jpg" alt="Em iu" style="border-radius: 20%;">
-              </h1>
-        </div>
-        <!-- <div style="float: left;">
-            <p style="color: white;" class="title_2">Những thứ dễ thương</p>
-        </div> -->
-         <div class="right_hd title_2">
-            Story Anh & Em
-        </div>
-      </div>      
+  <header class="header">
+    <div class="background">
+      <div class="highlight-text">Thành ❤️ Thảo</div>
+      <canvas id="snowCanvas"></canvas>
     </div>
-    <div id="mainvisual">
-      <!-- <h2 style="top: 8%;" class="title_bg">
-        Người yêu tui nà ❤️
-      </h2> -->
-      <div class="firefly01">&nbsp;</div>
-      <div class="firefly02">&nbsp;</div>
-      <div class="mainvs_dark">&nbsp;</div>
-    </div>
-    <div id="main">
-      <div id="content" class="index">
-        <div class="box01">
-          <div class="inner">
-            <div class="b01_left pc">
-              <ul class="left_sl01">
-                <li class="sl_item01"><img src="images/doita_3.jpg" alt="vườn địa đàn"></li>
-              </ul>            
-            </div>
-            <div class="b01_right">
-              <h3 class="index_h3" id="gt" data-anchor="25">
-                Lời tự sự của Anh
-              </h3>
-              <div class="b01_content">
-                <p>Chào em,
-                  <span style="color: red">Người con gái anh yêu ❤️ </span>. Anh rất vui khi gặp em ở đây. 
-                    Anh là một người thích du lịch nhưng chưa có cơ hội được đi với em, rảnh rỗi anh hay đọc sách, 
-                    trầm tính, ít nói là tính cách của anh,
-                    và anh là người muốn được lắng nghe và tìm hiểu thêm về em. 
-                </p>
-              </div>
-            </div>
-          </div>          
-        </div>
-        <div class="box02">
-          <div class="b02_content">
-            <h4 id="sp" class="index_h4">
-              <span>Đôi ta</span>
-            </h4>
-            <div class="inner">
-              <ul class="carousel js-flickity sp_slider" data-flickity-options='{ "wrapAround": true,"groupCells": true, "prevNextButtons": false,"cellAlign":"left"}'>
-                <li class="sp_item carousel-cell">
-                  <p class="sp_slImg">
-                    <img src="images/doita_1.jpg" alt="Pizza Stagioni">
-                  </p>
-                  <span class="sp_title" style="color: red;">Chúc</span>
-                </li>
-                <li class="sp_item carousel-cell">
-                  <p class="sp_slImg">
-                    <img src="images/doita_2.jpg" alt="Pizza Stagioni">
-                  </p>
-                  <span class="sp_title" style="color: red;">Mừng</span>
-                </li>
-                <li class="sp_item carousel-cell">
-                  <p class="sp_slImg">
-                    <img src="images/doita_3.jpg" alt="Pizza Stagioni">
-                  </p>
-                  <span class="sp_title" style="color: red;">Giáng</span>
-                </li>
-                <li class="sp_item carousel-cell">
-                  <p class="sp_slImg">
-                    <img src="images/doita_4.jpg" alt="Pizza Stagioni">
-                  </p>
-                  <span class="sp_title" style="color: red;">Sinh</span>
-                </li>
-
-                <li class="sp_item carousel-cell">
-                    <p class="sp_slImg">
-                      <img src="images/doita_3.jpg" alt="Pizza Stagioni">
-                    </p>
-                    <span class="sp_title" style="color: red;">Yêu</span>
-                </li>
-                <li class="sp_item carousel-cell">
-                    <p class="sp_slImg">
-                      <img src="images/anh_va_em_2.png" alt="Pizza Stagioni">
-                    </p>
-                    <span class="sp_title" style="color: red;">Em</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="box03">
-          <div class="inner">
-            <div class="b03_content">
-              <h4 class="index_h4 skin_h4" id="bv">
-                <span>Viết cho em</span>
-              </h4>
-              <ul class="post_list">
-                <li class="post_item">
-                    <span class="post_ttl">
-                      Buổi gặp nhau lần đầu
-                    </span>
-                    <span class="post_cnt">
-                        Thật bất ngờ vì <span style="color: blue">em đã đồng ý cùng anh đi ăn đồ nướng và Xem Phim nè </span>.
-                        Đợi chờ trước cổng nhà em là sự hoang mang với sự hồi hộp.
-                        Hông biết em như nào.
-                        Liệu rằng có giống như trong hình
-                        Khi ngó thấy em bước ra cao ơi là cao là anh biết là đúng người rồi,
-                        bước lên xe 1 điều làm anh thấy rất bất ngờ là em là người chủ động bắt chuyện với anh.
-                        Anh đã rất ngại ngùng và đã bắt đầu nãy sinh 1 phần cảm xúc khi đó
-                    </span>
-                </li>
-                <li class="post_item">
-                    <span class="post_ttl">
-                      Buổi gặp ở Quán D'latcha Tea & Bistro
-                    </span>
-                    <span class="post_cnt">
-                        Nhìn em hồn nhiên dễ thương, nói cười vui vẻ khi anh đến trễ (Còn bảo anh bị trừ điểm thanh lịch nữa :v). 
-                        Cô gái của anh lúc đó nói chuyện cực kỳ dễ thương nha.
-                    </span>
-                </li>
-                <li class="post_item">
-                    <span class="post_ttl">
-                      Buổi Ăn trưa ở King BBQ & xem phim lần 2
-                    </span>
-                    <span class="post_cnt">
-                        Đặc biệt là lúc anh bóc tôm cho em. Nhìn em khen mà anh tự tin hẳn.
-                        Trong rạp chiếu phim cùng anh. Đang xem phim ngon lành tự nhiên đến khúc cảm xúc anh lại quay sang xoa đầu em.
-                        Hông hiểu sao anh lại có hành động như vậy lun.
-                        Anh cảm thấy tràn ngập hạnh phúc và ấm áp, như có cả thế giới yêu thương được gói gọn trong đó.
-                        Anh cứ hỏi lòng biết phải làm sao đây. Lúc đó anh chỉ muốn nói là có lẽ <span style="color: red">anh đã có tình cảm với em rồi</span>. Sau đó thì...
-                    </span>
-                </li>
-                <li class="post_item">
-                      <span class="post_image">
-                        <img src="images/b03_img03.jpg" alt="Pizza">
-                      </span>
-                      <span class="post_ttl">
-                        Bạn gái chính thức của anh
-                      </span>
-                      <span class="post_cnt">
-                        Sau lần trao nụ hôn. Anh đã rất mạnh dạn dùng cảm để nói ra lời tỏ tình với em và được <span style="color: red">em đồng ý (05/11/2024)</span>.
-                        Lúc đó anh và em cũng đổi biệt danh cho nhau
-                        Cảm xúc anh lúc đó thật khó tả. <span style="color: red">Anh yêu em ❤️ </span>
-                        Nhưng chưa có món quà nào lúc đó. Phải đến buổi gặp tiếp theo thì anh mới tặng em Món quà lần đầu tiên sau khi 2 đứa chính thức quen nhau
-                         (View Mì Cay 😘)
-                      </span>
-                  </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="boxGroup">          
-          <div class="box04">
-            <div class="b04_bg">&nbsp;</div>
-            <div class="inner">
-              <div class="b04_content">
-                <h4 class="index_h4" id="tt">
-                  <span>Viết cho anh</span>
-                </h4>
-                <ul class="post_list dark_item">
-                  <li class="post_item">
-                      <span class="post_ttl">
-                        Món quà bất ngờ
-                      </span>
-                      <span class="post_cnt">
-                        "Nụ hôn" đáng yêu và mờ ê mê là món quà mà anh đã để dành tặng em
-                        trong buổi gặp lại em ở Rạp CGV
-                      </span>
-                  </li>
-                  <li class="post_item">
-                      <span class="post_ttl">
-                        Món quà sinh nhật
-                      </span>
-                      <span class="post_cnt">
-                        - Đang cập nhật -
-                        <!-- Là ngày mà anh có cơ hội để tặng em món quà mà em đang thiếu trong bộ sưu tập.
-                        Nhân dịp sinh nhật 05/12 của em. Anh chúc em ❤️ luôn vui vẻ & hạnh phúc cùng anh mãi mãi  -->
-                      </span>
-                  </li>
-                  <li class="post_item">
-                    <span class="post_ttl">
-                      Em luôn giành sự quan tâm cho anh
-                    </span>
-                    <span class="post_cnt">- Nắng mưa gì em cũng đi ăn với anh như đã hẹn</span>
-                    <span class="post_cnt">- Em luôn quan tâm & chia sẽ với anh. Luôn lắng nghe a nói,...</span>
-                    <span class="post_cnt">- Đang cập nhật</span>
-                </li>
-                  <li class="post_item">
-                    <span class="post_ttl">
-                      Góc người yêu
-                    </span>
-                    <p class="post_cnt">Các món ăn khoái khẩu của em ❤️</p>
-                    <p class="post_cnt">- Thích uống trà sữa nè</p>
-                    <p class="post_cnt">- Thích Xem phim ma mà sợ ma nè</p>
-                    <p class="post_cnt">- Thích đi biển dữ luôn. Đặt biệt là chụp ảnh nha</p>
-                    <p class="post_cnt">- Khổ qua là món khoái khẩu luôn trời</p>
-                    <p class="post_cnt">- Thích nhậu nữa. Bánh tráng & xoài lắc cũng ngon luôn</p>
-                    <p class="post_cnt">- Ăn rất healthy rau cỏ nha</p>
-                    <p class="post_cnt">- Thích anh để ảnh em ❤️. (A cũng thích em để 2 đứa lun hix 🥲)</p>
-                    <p class="post_cnt">- Thích lãng mạn cùng anh ❤️,...</p>
-                    <p class="post_cnt">- Đang cập nhật</p>
-
-                    <p class="post_cnt">Birthday ❤️(05/12/2000)</p>
-                </li>
-                <li class="post_item">
-                    <span class="post_ttl">
-                      Điều mà em ❤️ thực sự không thích
-                    </span>
-                    <p class="post_cnt">- Trời mưa quá</p>
-                    <p class="post_cnt">- Hỏng thích Gu Hàn</p>
-                    <p class="post_cnt">- Chê Pizza luôn</p>
-                    <p class="post_cnt">- Hông ham nuôi mèo</p>
-                    <p class="post_cnt">- Ăn cay quá thì lè lưỡi chịu hỏng nổi,...</p>
-                    <p class="post_cnt">- Đang cập nhật</p>
-                </li>
-                <li class="post_item">
-                    <span class="post_ttl">
-                      Quán ăn đã cùng Em ❤️ thử qua
-                    </span>
-                    <p class="post_cnt">- King BBQ</p>
-                    <p class="post_cnt">- GoGi</p>
-                    <p class="post_cnt">- Đang cập nhật</p>
-                </li>
-                </ul>
-              </div>
-            </div>
-          </div> 
-          <div class="box05">
-            <div class="inner">
-              <div class="b05_content">
-                <h4 id="sk" class="index_h4">
-                  <span>Những chuyến đi với em ❤️</span>
-                </h4>
-                <!-- <p class="post_item post_date" style="font-size: 13px;width: 100%;text-align: center;">
-                    "Anh yêu em rất nhiều ❤️".
-                    Anh sẽ giành cho Em những điều chân thành ❤️
-                </p> -->
-                <p class="post_item post_date" style="font-size: 16px;width: 100%;text-align: center;">
-                  - Đà lạt (05/12/2024 - 08/12/2024)
-              </p>
-              </div>
-            </div>
-          </div>    
+  </header>
+  <main>
+    <div class="content">
+      <h1>Merry christmas ❤️</h1>
+      <div class="letter">
+        <img src="images/letter.jpg" alt="Background" width="300" />
+        <div class="content-letter">
+            <p>
+                Chào em, Người con gái anh yêu ❤️ . 
+                Anh rất vui khi gặp em ở đây. 
+                Anh là một người thích du lịch nhưng chưa có cơ hội được đi với em, rảnh rỗi anh hay đọc sách, trầm tính, ít nói là tính cách của anh, và anh là người muốn được lắng nghe và tìm hiểu thêm về em.
+            </p>
         </div>
       </div>
+
+      <p>-- Chúng ta của hiện tại --</p>
     </div>
-    <div id="footer">
-      <div class="fixed_items">        
-        <ul class="fixed_contact sp">
-          <li class="contact_item">
-            <p style="color: white;text-align: center;">Đây là Em ❤️</p>
-            <a class="fb_fixed" href="https://www.facebook.com/ThanhThao512">
-              <i class="icon-fb"></i>
-            </a>
-          </li>
-        </ul>
-        <p class="totop sp">
-          <button>&nbsp;</button>
-        </p>
-      </div>      
-      <div class="inner">
-        <div class="f_left">
-          <p class="f_logo">
-            <a href="https://www.facebook.com/ffer.tosu">
-              <img src="images/love_gif.png" alt="Em iu">
-            </a>
-          </p>
-          <p class="f_contact">
-            <span class="f_ttl01">Người yêu của em</span>
-            <ul class="contact_infor">
-              <li class="contact_line">
-                <span class="first_txt">Địa chỉ: </span>
-                <span class="last_txt">524/7 đường Cần Câu, Tổ 2, ấp 1b, Phước Hòa - Phú Giáo - Bình Dương</span>
-              </li>
-              <li class="contact_line">
-                <span class="first_txt">Điện thoại: </span>
-                <span class="last_txt">0937519106</span>
-              </li>
-              <li class="contact_line">
-                <span class="first_txt">Email: </span>
-                <span class="last_txt">tanthanhphuochoa@gmail.com</span>
-              </li>
-            </ul>
-          </p>
+
+    <marquee>
+        Anh cứ loay hoay đi tìm tình yêu /
+        Nóng như bị lửa thiêu /
+        Chân đau người liêu xiêu /
+        Lang thang thật cô liêu /
+        Xong bắt xe đi xuống tận Bạc Liêu /
+        Hết cả tiền để tiêu /
+        Mà vẫn chẳng có một ai yêu /
+        Chạy dọc cả Bắc Nam /
+        Mà chẳng thấy bóng cô nào /
+        Lật đật về Bến Cát /
+        Tìm một cô gái đáng yêu /
+        Đáng yêu rất đáng yêu đáng yêu /
+        Dễ nuông chiều nuông chiều /
+        Không cần nói quá nhiều /
+        Mà vẫn biết điều biết điều /
+        Bố mẹ anh muốn bế cháu rồi /
+        Một gái một trai thì vui ối dồi /
+        Sinh ra cho đến bây giờ /
+        Chưa một mối tình duyên nợ /
+        Thầy bu thì trông chờ /
+        Mong cậu quý tử lấy vợ /
+        Gấp lắm rồi lắm rồi lắm rồi Em ơi ❤️
+    </marquee>
+
+    <div class="card-container" id="card-container">
+        <!-- Các thẻ card sẽ được thêm vào đây bởi JavaScript -->
+    </div>
+
+    <!-- START STORY -->
+    <div class="story-2">
+        <div class="content">
+            <div class="dark_item">
+                <p class="title">Buổi gặp 1</p>
+                <p class="list">-- Đang cập nhật --</p>
+            </div>
+            <div class="dark_item">
+                <p class="title">Buổi gặp 2</p>
+                <p class="list">-- Đang cập nhật --</p>
+            </div>
+            <div class="dark_item">
+                <p class="title">Buổi gặp 3</p>
+                <p class="list">-- Đang cập nhật --</p>
+            </div>
+            <div class="dark_item">
+                <p class="title">Buổi gặp 4</p>
+                <p class="list">-- Đang cập nhật --</p>
+            </div>
         </div>
-      </div>
     </div>
-  </div>   
+    <!-- END STORY -->
+
+    <!-- START STORY -->
+    <div class="story">
+        <div class="content">
+            <div class="dark_item">
+                <p class="title">Món quà bất ngờ</p>
+                <p class="list">-- Đang cập nhật --</p>
+            </div>
+            <div class="dark_item">
+                <p class="title">Những chuyến đi với em ❤️</p>
+                <p class="list">-- Đang cập nhật --</p>
+            </div>
+            <div class="dark_item">
+                <p class="title">Quán ăn đã cùng Em ❤️ thử qua</p>
+                <p class="list">-- Đang cập nhật --</p>
+            </div>
+            <div class="dark_item">
+                <p class="title">Góc người yêu</p>
+                <p class="list">-- Đang cập nhật --</p>
+            </div>
+        </div>
+    </div>
+    <!-- END STORY -->
+
+     <!-- START FOOTER -->
+     <div class="footer">
+        <div class="content">
+            <div class="dark_item">
+                <p class="title">Người yêu của em</p>
+                <p class="list">Địa chỉ: 524/7 đường Cần Câu, Tổ 2, ấp 1b, Phước Hòa - Phú Giáo - Bình Dương</p>
+                <p class="list">Điện thoại: 0937519106</p>
+                <p class="list">Email: tanthanhphuochoa@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    <!-- END FOOTER -->
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
