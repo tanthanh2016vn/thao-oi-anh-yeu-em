@@ -125,6 +125,11 @@ body {
   gap: 10px;
   width: 90%;
   margin: 32px auto;
+
+  @media (max-width: 650px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 .letter .content-letter {
@@ -145,13 +150,17 @@ body {
   padding: 20px; /* Thêm padding để khoảng cách bên trong */
   color: white; /* Thay đổi màu chữ để dễ đọc trên nền ảnh */
   font-family: Arial, sans-serif; /* Chọn font chữ */
-  margin: 32px auto;
 }
 
 .story-2 .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
+
+  @media (max-width: 650px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 .story-2 .content .dark_item {
@@ -161,7 +170,7 @@ body {
   font-family: "MyriadPro-BoldCondIt";
   display: block;
   color: #fff;
-  font-size: 240%;
+  font-size: 18px;
   margin-bottom: 10px;
   padding-top: 10px;
   white-space: nowrap;
@@ -184,13 +193,21 @@ body {
   padding: 20px; /* Thêm padding để khoảng cách bên trong */
   color: white; /* Thay đổi màu chữ để dễ đọc trên nền ảnh */
   font-family: Arial, sans-serif; /* Chọn font chữ */
-  margin: 32px auto;
+  
+  @media (max-width: 650px) {
+    padding: unset;
+  }
 }
 
 .story .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
+
+  @media (max-width: 650px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 .story .content .dark_item {
@@ -200,7 +217,7 @@ body {
   font-family: "MyriadPro-BoldCondIt";
   display: block;
   color: #fff;
-  font-size: 240%;
+  font-size: 18px;
   margin-bottom: 10px;
   padding-top: 10px;
   white-space: nowrap;
@@ -230,7 +247,7 @@ body {
   font-family: "MyriadPro-BoldCondIt";
   display: block;
   color: #fff;
-  font-size: 240%;
+  font-size: 18px;
   margin-bottom: 10px;
   padding-top: 10px;
   white-space: nowrap;
