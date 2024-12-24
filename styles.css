@@ -48,10 +48,40 @@ main .content {
   text-align: center;
 }
 
-main .content h1 {
-  font-size: 32px;
+/* START merry-christmas */
+.merry-christmas {
+  font-size: 42px;
   margin-bottom: 10px;
+
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff3366, #ffcc00);
+  color: transparent;
+  -webkit-background-clip: text;
+  text-shadow: 0 0 2px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.8), 0 0 15px rgba(255, 0, 0, 1);
+  animation: glow 12s ease-in-out infinite alternate, swing 1.5s ease-in-out infinite;
 }
+
+@keyframes glow {
+  0% {
+      text-shadow: 0 0 2px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.7), 0 0 30px rgba(255, 0, 0, 0.5);
+  }
+  100% {
+      text-shadow: 0 0 6px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 0.8), 0 0 60px rgba(255, 0, 0, 0.8);
+  }
+}
+
+@keyframes swing {
+  0% {
+      transform: rotate(-10deg);
+  }
+  50% {
+      transform: rotate(10deg);
+  }
+  100% {
+      transform: rotate(-10deg);
+  }
+}
+/* END merry-christmas */
 
 main .content p {
   font-size: 18px;
@@ -169,13 +199,16 @@ body {
 .story-2 .content .dark_item .title {
   font-family: "MyriadPro-BoldCondIt";
   display: block;
-  color: #fff;
   font-size: 18px;
   margin-bottom: 10px;
   padding-top: 10px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  font-weight: bold;
+  color: #ff6f61;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .story-2 .content .dark_item .list {
@@ -223,6 +256,10 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  font-weight: bold;
+  color: #FFD700; /* Màu vàng gold */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .story .content .dark_item .list {
@@ -230,7 +267,7 @@ body {
   display: block;
   font-size: 16px;
   color: #fff;
-  line-height: 30px;
+  line-height: 24px;
 }
 /* ====== END HIỂN THỊ STORY  ===== */
 
@@ -247,7 +284,7 @@ body {
   font-family: "MyriadPro-BoldCondIt";
   display: block;
   color: #fff;
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 10px;
   padding-top: 10px;
   white-space: nowrap;
@@ -263,3 +300,39 @@ body {
   line-height: 30px;
 }
 /* ====== END HIỂN THỊ FOOTER  ===== */
+
+/* ====== START HIỂN THỊ HEADER  ===== */
+.content-letter .header {
+  font-size: 2.5em;
+  color: #d34c4a;
+  margin-bottom: 10px;
+}
+.content-letter .icons {
+  font-size: 2em;
+  margin: 10px 0;
+}
+.content-letter .message {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #444;
+}
+.content-letter .footer {
+  margin-top: 20px;
+  font-size: 1em;
+  color: #666;
+}
+.content-letter .link-title a {
+  color: #d34c4a;
+  text-decoration: none;
+}
+.content-letter .link-title a:hover {
+  text-decoration: underline;
+}
+
+.marquee {
+  font-size: 24px;
+  color: #ff6f61;
+  font-weight: bold;
+  margin: 20px 0;
+}
+/* ====== END HIỂN THỊ HEADER  ===== */

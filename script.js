@@ -58,7 +58,7 @@ window.onload = function () {
     const container = document.getElementById('card-container');
 
     // Giả sử có 4 ảnh và tiêu đề tương ứng
-    const totalImages = 18;
+    const totalImages = 11;
 
     for (let i = 1; i <= totalImages; i++) {
         const cardElement = document.createElement('div');
