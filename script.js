@@ -12,8 +12,8 @@ function createSnowflake() {
     return {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        size: Math.random() * 3 + 2,
-        speed: Math.random() * 1 + 0.5,
+        size: Math.random() * 3 + 1,
+        speed: Math.random() * 1 + 0.2,
         angle: Math.random() * Math.PI * 2,
     };
 }
