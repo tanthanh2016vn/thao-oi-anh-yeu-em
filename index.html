@@ -1,157 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="images/letter.jpg" type="image/x-icon">
-  <title>Thành ❤️ Thảo</title>
-  <link rel="stylesheet" href="styles.css">
-
-  <style>
-    /* // Hiển thị hiệu ứng tuyết rơi toàn trang */
-    canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 9999;
-            pointer-events: none; /* Đảm bảo tương tác của người dùng không bị ảnh hưởng */
-        }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown with Fireworks and New Year Wishes</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
-    <div class="background">
-      <div class="highlight-text">Thành ❤️ Thảo</div>
-      <canvas id="snowCanvas"></canvas>
-    </div>
-  </header>
-  <main>
-    <div class="content">
-      <h1 class="merry-christmas">Merry christmas ❤️</h1>
-      <div class="letter">
-        <img src="images/letter.jpg" alt="Background" width="300" style="object-fit: cover;" />
-        <div class="content-letter">
-            <div class="container">
-                <div class="header">🎅 Chúc Mừng Giáng Sinh, Em Yêu! 🎄</div>
-                <div class="icons">❄️🎁✨🎀❤️🎶</div>
-                <div class="message">
-                  Anh mong rằng mùa Noel này sẽ mang đến cho em thật nhiều niềm vui và những khoảnh khắc ấm áp.  
-                  Dù ngoài kia lạnh giá, anh sẽ luôn là nơi để em tựa vào, mang lại sự bình yên và ấm áp cho trái tim em.  
-                  <br><br>
-                  Cảm ơn em đã là món quà quý giá nhất trong cuộc đời anh. Mỗi khoảnh khắc bên em đều thật hạnh phúc, và anh mong rằng chúng ta sẽ mãi bên nhau.  
-                  <br><br>
-                  Chúc em một mùa Giáng Sinh tràn đầy yêu thương và hạnh phúc!  
-                </div>
-                <div class="icons">🎅🎄❄️🎁✨❤️</div>
-                <div class="link-title">
-                  Với tất cả yêu thương,  
-                  <br>
-                  <a href="https://www.facebook.com/ffer.tosu">Anh Yêu của em ❤️</a>
-                </div>
-              </div>
 
-        </div>
-      </div>
+    <!-- Lớp phủ màu tối -->
+    <div id="overlay"></div>
+    <!-- Countdown -->
+
+    <!-- Chèn hình ảnh nền vào trang -->
+    <div class="background-image-container">
+        <img id="backgroundImage" src="images/bg-new-year-2025.jpg" class="background-image" alt="Background">
     </div>
 
-    <marquee class="marquee">
-        🎄 Chúc cho cô gái mà anh thương ❤️
-        Có một đêm Giáng Sinh an lành ✨ và ấm áp 🔥.
-        Với thật nhiều niềm vui 😄 và sự hạnh phúc 🥰.
-        🎁 Chúc cho những điều tốt lành nhất sẽ đến với em 🌟.
-        Cảm ơn em vì đã đến..!! 💕
-        Yêu em ❤️💌
-    </marquee>
-
-    <div class="card-container" id="card-container">
-        <!-- Các thẻ card sẽ được thêm vào đây bởi JavaScript -->
+    <div class="countdown-container">
+        <div id="countdown"></div>
+        <div id="messages"></div>
     </div>
 
-    <!-- START STORY -->
-    <div class="story-2">
-        <div class="content">
-            <div class="dark_item">
-                <p class="title">Chính thức Yêu nhau ❤️❤️❤️</p>
-                <p class="list"> 03/11/2024 </p>
-            </div>
-            <div class="dark_item">
-                <p class="title">Ngày vào nhà Anh ❤️</p>
-                <p class="list"> 22/12/2024 </p>
-            </div>
-            <div class="dark_item">
-                <p class="title">Đón giao thừa ❤️</p>
-                <p class="list"> 31/12/2024 </p>
-            </div>
-            <div class="dark_item">
-                <p class="title">Ngày vào nhà em ❤️</p>
-                <p class="list">-- Đang cập nhật --</p>
-            </div>
-            <div class="dark_item">
-                <p class="title">Sinh nhật Em ❤️</p>
-                <p class="list">05/12</p>
-            </div>
-            <div class="dark_item">
-                <p class="title">Sinh nhật Anh ❤️</p>
-                <p class="list">14/07</p>
-            </div>
-        </div>
-    </div>
-    <!-- END STORY -->
+    <!-- Canvas để vẽ pháo hoa -->
+    <canvas id="fireworksCanvas"></canvas>
 
-    <!-- START STORY -->
-    <div class="story">
-        <div class="content">
-        
-            <div class="dark_item">
-                <p class="title">Những chuyến đi cùng nhau 💛</p>
-                <p class="list">Đà lạt </p>
-                <p class="list">Sài Gòn </p>
-                <p class="list">TDM </p>
-                <p class="list"> ... </p>
-            </div>
-            <div class="dark_item">
-                <p class="title">Quán ăn cùng đến 💛</p>
-                <p class="list">Tiệm nướng hoàng hôn (TDM) </p>
-                <p class="list">Tiệm Gà Lưng Chừng Đồi (Đà lạt) </p>
-                <p class="list">Nem nướng (Đà lạt) </p>
-                <p class="list">Tiệm cà phê Dốc Thị (Đà lạt) </p>
-                <p class="list"> ... </p>
-            </div>
-            <div class="dark_item">
-                <p class="title">Góc về Em 💛</p>
-                <p class="list">Thích ăn Khổ qua (Khoái khẩu luôn) </p>
-                <p class="list">Thích uống tà tữa </p>
-                <p class="list">Thích đi biển </p>
-                <p class="list">Thích bánh tráng, chân gà </p>
-                <p class="list">Thích trái cây ngon </p>
-                <p class="list">Thích săn ly </p>
-                <p class="list">Thích hoa hồng, dâu tây </p>
-                <p class="list">Thích hòa mình vào thiên nhiên </p>
-                <p class="list"> ... </p>
-            </div>
-            <div class="dark_item">
-                <p class="title">Góc về Anh 💛</p>
-                <p class="list">-- Đang cập nhật --</p>
-            </div>
-        </div>
-    </div>
-    <!-- END STORY -->
+    <!-- Thêm nhạc nền -->
+    <audio id="backgroundMusic"src="./mp3/xuan-toi-noi.mp3"  loop>
+        Your browser does not support the audio element.
+    </audio>
 
-     <!-- START FOOTER -->
-     <div class="footer">
-        <div class="content">
-            <div class="dark_item">
-                <p class="title">Anh yêu của em ❤️</p>
-                <p class="list">Địa chỉ: 524/7 đường Cần Câu, Tổ 2, ấp 1b, Phước Hòa - Phú Giáo - Bình Dương</p>
-                <p class="list">Điện thoại: 093.7519.106</p>
-                <p class="list">Email: tanthanhphuochoa@gmail.com</p>
-            </div>
-        </div>
-    </div>
-    <!-- END FOOTER -->
-  </main>
-  <script src="script.js"></script>
+
+    <div id="imageContainer"></div>
+    <script src="script.js"></script>
 </body>
 </html>
